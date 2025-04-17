@@ -1,12 +1,19 @@
 // inputfield.tsx
 import React from 'react';
 import './style.css';
+interface Props {
+  todo:string;
+  setTodo:React.Dispatch<React.SetStateAction<string>>
+}
 
-const InputField = () => {
+const InputField:React.FC<Props> = ({todo, setTodo}:Props) => {
   return (
     <form className='input'>
-      <input type="text" placeholder='Enter a task' className='inputBox'/>
-      <button className='inputSubmit' type='submit'> </button>
+      <input type="input"
+       value={todo}
+       onChange={(e) => setTodo(e.target.value)}
+       placeholder='Enter a task' className='inputBox'/>
+      <button className='inputSubmit' type='submit'>Go</button>
     </form>
   );
 };
