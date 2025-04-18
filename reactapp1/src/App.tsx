@@ -12,13 +12,15 @@ const App: React.FC = () => {
       setTodos([...todos, {id: Date.now(), todo:todo, isDone:false}])
       setTodo("");
     }
-
   }
   console.log(todos)
   return (
     <div className="App">
       <div className="heading">Taskify</div>
       <InputField todo= {todo} setTodo={setTodo} handleAdd={handleAdd} />
+      {todos.map((t) => (
+        <li>{t.todo}</li>
+      ))}
     </div>
   );
 };
