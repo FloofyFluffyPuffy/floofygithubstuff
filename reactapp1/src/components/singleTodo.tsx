@@ -7,9 +7,9 @@ type Props = {
 }
 const SingleTodo:React.FC<Props> = ({todo, todos, setTodos}) => {
   return (
-    <div>
-      
-    </div>
+    <form className='todos_single'>
+        <span className="todos__single--text">{todo.todo}</span>
+    </form>
   )
 }
 
