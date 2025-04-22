@@ -3,19 +3,18 @@ import "./style.css";
 import { Todo } from './model';
 import SingleTodo from './singleTodo';
 interface Props{
-    todos:Todo[]
-    setTodos: React.Dispatch<React.SetStateAction<Todo[]>>
+    todos3:Todo[]
+    setTodos3: React.Dispatch<React.SetStateAction<Todo[]>>
 }
-const TodoList:React.FC<Props> = ({todos, setTodos}) => {
+const TodoList:React.FC<Props> = ({todos3, setTodos3}) => {
   return (
     <div className='todos'>
-        {todos.map((todo) => (
+        {todos3.map((todo) => (
             <SingleTodo 
-            todo={todo}
+            todo4={todo}
             key={todo.id}
-            todos={todos}
-            setTodos={setTodos}
-
+            todos4={todos3}
+            setTodos4={setTodos3}
             /> 
     ))}
         

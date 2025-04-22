@@ -2,12 +2,12 @@
 import React, { useRef, useState } from 'react';
 import './style.css';
 interface Props {
-  todo:string;
-  setTodo:React.Dispatch<React.SetStateAction<string>>;
+  todo2:string;
+  setTodo2:React.Dispatch<React.SetStateAction<string>>;
   handleAdd: (e:React.FormEvent) => void;
 }
 
-const InputField:React.FC<Props> = ({todo, setTodo, handleAdd}) => {
+const InputField:React.FC<Props> = ({todo2, setTodo2, handleAdd}) => {
   const inputRef = useRef<HTMLInputElement>(null);
   return (
     <form className='input' onSubmit={(e) => {
@@ -17,8 +17,8 @@ const InputField:React.FC<Props> = ({todo, setTodo, handleAdd}) => {
 <input
   ref={inputRef} 
   type="input"
-  value={todo}
-  onChange={(e) => setTodo(e.target.value)}
+  value={todo2}
+  onChange={(e) => setTodo2(e.target.value)}
   placeholder='Enter a task' 
   className='input__box' 
 />
